@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-15T13:04:41 CST" name="Default suite" finished-at="2025-12-15T13:04:45 CST" duration-ms="3334">
+  <suite started-at="2025-12-16T23:27:43 CST" name="Default suite" finished-at="2025-12-16T23:27:46 CST" duration-ms="2783">
     <groups>
     </groups>
-    <test started-at="2025-12-15T13:04:41 CST" name="Default test" finished-at="2025-12-15T13:04:45 CST" duration-ms="3334">
-      <class name="com.orangeHRM.test.DummyClass">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangeHRM.test.DummyClass@1cbbffcd]" started-at="2025-12-15T13:04:41 CST" name="setup" finished-at="2025-12-15T13:04:44 CST" duration-ms="3058" status="PASS">
+    <test started-at="2025-12-16T23:27:43 CST" name="Default test" finished-at="2025-12-16T23:27:46 CST" duration-ms="2783">
+      <class name="orangehrm.test.DummyClass">
+        <test-method is-config="true" signature="setup()[pri:0, instance:orangehrm.test.DummyClass@1cbbffcd]" started-at="2025-12-16T23:27:43 CST" name="setup" finished-at="2025-12-16T23:27:46 CST" duration-ms="2502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="dummyTest()[pri:0, instance:com.orangeHRM.test.DummyClass@1cbbffcd]" started-at="2025-12-15T13:04:44 CST" name="dummyTest" finished-at="2025-12-15T13:04:44 CST" duration-ms="16" status="PASS">
+        <test-method signature="dummyTest()[pri:0, instance:orangehrm.test.DummyClass@1cbbffcd]" started-at="2025-12-16T23:27:46 CST" name="dummyTest" finished-at="2025-12-16T23:27:46 CST" duration-ms="15" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test Failed - Title is Not Matching ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test Failed - Title is Not Matching 
+at orangehrm.test.DummyClass.dummyTest(DummyClass.java:15)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dummyTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.orangeHRM.test.DummyClass@1cbbffcd]" started-at="2025-12-15T13:04:44 CST" name="tearDown" finished-at="2025-12-15T13:04:45 CST" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:orangehrm.test.DummyClass@1cbbffcd]" started-at="2025-12-16T23:27:46 CST" name="tearDown" finished-at="2025-12-16T23:27:46 CST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.orangeHRM.test.DummyClass -->
+      </class> <!-- orangehrm.test.DummyClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
