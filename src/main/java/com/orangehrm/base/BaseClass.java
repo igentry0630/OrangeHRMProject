@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,20 +13,34 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 public class BaseClass {
 
-	protected Properties prop;
-	protected WebDriver driver;
+	protected static Properties prop;
+	protected static WebDriver driver;
 
-	@BeforeMethod
-	public void setup() throws IOException {
+	@BeforeSuite
+	public void loadConfig() throws IOException {
 		// Load the configuration file
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream("src\\main\\resources\\config.properties");
 		prop.load(fis);
+	}
 
-		// Initialize WebDriver here based on browser defined in config.properties file
+	
+	@BeforeMethod
+	public void setup() throws IOException {
+		System.out.println("Setting up WebDriver for:"+this.getClass().getSimpleName());
+		launchBrowser();
+		configureBrowser();
+		staticWait(2);
+	
+	}
+/*Initialize WebDriver here based on browser defined in
+ *  config.properties file */
+
+private void launchBrowser() {
 		String browser = prop.getProperty("browser");
 
 		if (browser.equalsIgnoreCase("chrome")) {
@@ -44,7 +60,12 @@ public class BaseClass {
 		} else {
 			throw new IllegalArgumentException("Browser not supported: " + browser);
 		}
+	}
 
+	/*Configure browser settings such as implicit wait, maximizing the
+	 *  browser, and navigating to a specified URL.*/
+	
+private void configureBrowser() {
 		// Implicit Wait
 		int implicitWait = Integer.parseInt(prop.getProperty("implicitWait"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
@@ -52,13 +73,29 @@ public class BaseClass {
 		driver.manage().window().maximize();
 
 		// Navigate to the URL
-		driver.get(prop.getProperty("url"));
+		try {
+			driver.get(prop.getProperty("url"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Failed to Navigate to the URL:" + e.getMessage());
+		}
+		
 	}
 	
+	
+
 	@AfterMethod
 	public void tearDown() {
 		if (driver != null) {
-			driver.quit();
+			try {
+				driver.quit();
+			} catch (Exception e) {
+				System.out.println("unable to quite the driver:" + e.getMessage());
+			}
 		}
+	}
+	//Static wait for pause
+	public void staticWait(int seconds) {
+		LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(seconds)); // 5 seconds
 	}
 }
