@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.orangehrm.base.BaseClass;
+
 public class ActionDriver {
 	
 	private WebDriver driver;
@@ -16,6 +18,7 @@ public class ActionDriver {
 	
 	public ActionDriver(WebDriver driver) {
 		this.driver = driver;
+		int explicit = Integer.parseInt(BaseClass.getProp().getProperty("explicitWait"));
 		this.wait = new WebDriverWait(driver,Duration.ofSeconds(30));
 	}
 	
@@ -29,12 +32,14 @@ public class ActionDriver {
 		}
 	}
 	
-	//Method to type text into an input field
+	//Method to type text into an input field -- Avoid code duplication - fix the multiple calling methods
 	public void enterText(By by, String text) {
 		try {
-			waitForElementToBeVisible(by);
-			driver.findElement(by).clear();
-			driver.findElement(by).sendKeys(text);
+//			waitForElementToBeVisible(by);
+//			driver.findElement(by).clear();
+			WebElement element = driver.findElement(by);
+			element.clear();
+			element.sendKeys(text);
 		} catch (Exception e) {
 			System.out.println("Unable to enter the text into the input field: "+e.getMessage());
 		}
@@ -51,32 +56,46 @@ public class ActionDriver {
 		}
 	}
 	
-	//Method to compare Two strings
-	public void compareText(By by, String expectedText) {
+	//Method to compare Two strings -- changed return type
+	public boolean compareText(By by, String expectedText) {
 		try {
 			waitForElementToBeVisible(by);
 			String actualText = driver.findElement(by).getText();
 			if(actualText.equals(expectedText)) {
 				System.out.println("Text is Matching:"+actualText+" equals "+expectedText);
+				return true;
 			} else {
 				System.out.println("TText is Not Matching"+actualText+" does not equal "+expectedText);
+				return false;
 			}
 		} catch (Exception e) {
 			System.out.println("Unable to compare the texts: "+e.getMessage());
 		}
+		return false;
 	}
 	
 	//Method to check if element is displayed
-	public boolean isElementDisplayed(By by) {
+//	public boolean isElementDisplayed(By by) {
+//		try {
+//			waitForElementToBeVisible(by);
+//			boolean isDisplayed = driver.findElement(by).isDisplayed();
+//			if(isDisplayed) {
+//				System.out.println("Element is visible");
+//				return isDisplayed;
+//			} else {
+//				return isDisplayed;
+//			}
+//		} catch (Exception e) {
+//			System.out.println("Element is not displayed: "+e.getMessage());
+//			return false;
+//		}
+//	}
+	
+	//Simplified the method and removed redundant code
+	public boolean isDisplayed(By by) {
 		try {
 			waitForElementToBeVisible(by);
-			boolean isDisplayed = driver.findElement(by).isDisplayed();
-			if(isDisplayed) {
-				System.out.println("Element is visible");
-				return isDisplayed;
-			} else {
-				return isDisplayed;
-			}
+			return driver.findElement(by).isDisplayed();
 		} catch (Exception e) {
 			System.out.println("Element is not displayed: "+e.getMessage());
 			return false;
@@ -99,7 +118,7 @@ public class ActionDriver {
 		try {
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			WebElement element = driver.findElement(by);
-			js.executeScript("arguments[0].scrollIntoView(true)", element);
+			js.executeScript("arguments[0].scrollIntoView(true);", element);
 		} catch (Exception e) {
 			System.out.println("Unable to locate the element to scroll to: "+e.getMessage());
 		}

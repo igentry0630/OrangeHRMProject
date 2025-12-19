@@ -95,6 +95,11 @@ private void configureBrowser() {
 		}
 	}
 	
+	//Getter method for prop
+	public static Properties getProp() {
+		return prop;
+	}
+	
 	//Driver getter method
 	public WebDriver getDriver() {
 		return driver;
