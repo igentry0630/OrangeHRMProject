@@ -15,10 +15,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.orangehrm.actiondriver.ActionDriver;
+
 public class BaseClass {
 
 	protected static Properties prop;
 	protected static WebDriver driver;
+	private static ActionDriver actionDriver;
 
 	@BeforeSuite
 	public void loadConfig() throws IOException {
@@ -35,7 +38,12 @@ public class BaseClass {
 		launchBrowser();
 		configureBrowser();
 		staticWait(2);
-	
+		
+		//Initialize ActionDriver only once
+		if (actionDriver == null) {
+			actionDriver = new ActionDriver(driver);
+			System.out.println("ActionDriver instance is created.");
+		}
 	}
 /*Initialize WebDriver here based on browser defined in
  *  config.properties file */
@@ -93,17 +101,38 @@ private void configureBrowser() {
 				System.out.println("unable to quite the driver:" + e.getMessage());
 			}
 		}
+		System.out.println("Webdriver instance is closed.");
+		driver = null;
+		actionDriver = null;
 	}
 	
-	//Getter method for prop
-	public static Properties getProp() {
-		return prop;
-	}
-	
+	/*
 	//Driver getter method
 	public WebDriver getDriver() {
 		return driver;
+	} */
+	
+	//Getter Method for WebDriver
+	public static WebDriver getDriver() {
+		if(driver==null) {
+			System.out.println("WebDriver instance is not intialized");
+			throw new IllegalStateException("WebDriver instance is not initialized");
+		}
+		return driver;
 	}
+	
+	//Getter method for prop
+		public static Properties getProp() {return prop; }
+	
+	//Getter Method for ActionDriver
+	public static ActionDriver getActionDriver() {
+		if(actionDriver==null) {
+			System.out.println("ActionDriver instance is not intialized");
+			throw new IllegalStateException("ActionDriver instance is not initialized");
+		}
+		return actionDriver;
+	}
+	
 	
 	//Driver setter method
 	public void setDriver(WebDriver driver) {
