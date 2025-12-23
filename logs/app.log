@@ -1,0 +1,14 @@
+2025-12-22 21:19:45 [main] INFO  BaseClass - config.properties file loaded
+2025-12-22 21:19:48 [main] INFO  BaseClass - EdgeDriver instance is created.
+2025-12-22 21:19:51 [main] INFO  BaseClass - Webdriver Initialized and Browser maximized
+2025-12-22 21:19:51 [main] TRACE BaseClass - Trace Message
+2025-12-22 21:19:51 [main] ERROR BaseClass - Error Message
+2025-12-22 21:19:51 [main] DEBUG BaseClass - Debug Message
+2025-12-22 21:19:51 [main] FATAL BaseClass - Fatal Message
+2025-12-22 21:19:51 [main] WARN  BaseClass - Warn Message
+2025-12-22 21:19:51 [main] INFO  ActionDriver - WebDriver instance is created.
+2025-12-22 21:19:51 [main] INFO  BaseClass - ActionDriver instance is created.
+2025-12-22 21:19:51 [main] INFO  ActionDriver - Entered text: invalidUser
+2025-12-22 21:19:51 [main] INFO  ActionDriver - Entered text: invalidPass
+2025-12-22 21:19:51 [main] INFO  ActionDriver - Clicked on element
+2025-12-22 21:19:52 [main] INFO  BaseClass - Webdriver instance is closed.
