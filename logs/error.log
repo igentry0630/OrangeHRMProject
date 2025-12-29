@@ -14,3 +14,108 @@
 2025-12-24 17:08:48 [main] FATAL BaseClass - Fatal Message
 2025-12-24 17:09:13 [main] ERROR BaseClass - Error Message
 2025-12-24 17:09:13 [main] FATAL BaseClass - Fatal Message
+2025-12-29 11:16:04 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Error Message
+2025-12-29 11:16:04 [TestNG-test-OrangeHRMTest-4] FATAL BaseClass - Fatal Message
+2025-12-29 11:16:04 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Error Message
+2025-12-29 11:16:04 [TestNG-test-OrangeHRMTest-2] FATAL BaseClass - Fatal Message
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - Unable to enter the text into the input field: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1949cc29be840915698cba95b8ebedd7, sendKeysToElement [id, value]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 34652, ms:edgeOptions: {debuggerAddress: localhost:63492}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (1949cc29be840915698cba95b8ebedd7)] -> css selector: input[type='password']]
+Session ID: 1949cc29be840915698cba95b8ebedd7
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - Unable to locate the element: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1949cc29be840915698cba95b8ebedd7, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 34652, ms:edgeOptions: {debuggerAddress: localhost:63492}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1949cc29be840915698cba95b8ebedd7
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - element is not clickable: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1949cc29be840915698cba95b8ebedd7, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 34652, ms:edgeOptions: {debuggerAddress: localhost:63492}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1949cc29be840915698cba95b8ebedd7
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - Unable to click on the element
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - element is not visible: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1949cc29be840915698cba95b8ebedd7, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 34652, ms:edgeOptions: {debuggerAddress: localhost:63492}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1949cc29be840915698cba95b8ebedd7
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - Unable to locate the element: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1949cc29be840915698cba95b8ebedd7, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 34652, ms:edgeOptions: {debuggerAddress: localhost:63492}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1949cc29be840915698cba95b8ebedd7
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-4] ERROR ActionDriver - Element is not displayed: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1949cc29be840915698cba95b8ebedd7, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 34652, ms:edgeOptions: {debuggerAddress: localhost:63492}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63492/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1949cc29be840915698cba95b8ebedd7
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Error Message
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Error Message
+2025-12-29 11:16:05 [TestNG-test-OrangeHRMTest-3] FATAL BaseClass - Fatal Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Error Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-3] FATAL BaseClass - Fatal Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Error Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Error Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-4] FATAL BaseClass - Fatal Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Error Message
+2025-12-29 11:35:45 [TestNG-test-OrangeHRMTest-2] FATAL BaseClass - Fatal Message
+2025-12-29 11:35:52 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Error Message
+2025-12-29 11:35:52 [TestNG-test-OrangeHRMTest-3] FATAL BaseClass - Fatal Message
+2025-12-29 11:38:31 [TestNG-tests-1] ERROR BaseClass - Error Message
+2025-12-29 11:38:31 [TestNG-tests-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:38:37 [TestNG-tests-1] ERROR BaseClass - Error Message
+2025-12-29 11:38:37 [TestNG-tests-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:38:42 [TestNG-tests-1] ERROR BaseClass - Error Message
+2025-12-29 11:38:42 [TestNG-tests-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:38:48 [TestNG-tests-1] ERROR BaseClass - Error Message
+2025-12-29 11:38:48 [TestNG-tests-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:38:58 [TestNG-tests-1] ERROR BaseClass - Error Message
+2025-12-29 11:38:58 [TestNG-tests-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:40:43 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Error Message
+2025-12-29 11:40:43 [TestNG-test-OrangeHRMTest-3] FATAL BaseClass - Fatal Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Error Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-2] FATAL BaseClass - Fatal Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Error Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Error Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-5] FATAL BaseClass - Fatal Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Error Message
+2025-12-29 11:40:44 [TestNG-test-OrangeHRMTest-4] FATAL BaseClass - Fatal Message
+2025-12-29 11:41:17 [TestNG-test-OrangeHRMTest-3] ERROR ActionDriver - element is not visible: Expected condition failed: waiting for visibility of element located by By.xpath: //p[text()='Invalid credentials'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:50251}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50251/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd4a46a29bb8e04b04dc09e9cc492915
+2025-12-29 11:41:17 [TestNG-test-OrangeHRMTest-3] ERROR ActionDriver - Unable to compare the texts: Error communicating with the remote browser. It may have died.
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [dd4a46a29bb8e04b04dc09e9cc492915, findElement [using, value]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 143.0.3650.96, fedcm:accounts: true, goog:processID: 2380, ms:edgeOptions: {debuggerAddress: localhost:50251}, msedge: {msedgedriverVersion: 143.0.3650.96 (d55fe85d0141..., userDataDir: C:\Users\igent\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50251/devtoo..., se:cdpVersion: 143.0.3650.96, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dd4a46a29bb8e04b04dc09e9cc492915
+2025-12-29 11:43:21 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Error Message
+2025-12-29 11:43:21 [TestNG-test-OrangeHRMTest-1] FATAL BaseClass - Fatal Message
+2025-12-29 11:43:22 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Error Message
+2025-12-29 11:43:22 [TestNG-test-OrangeHRMTest-4] FATAL BaseClass - Fatal Message
+2025-12-29 11:43:23 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Error Message
+2025-12-29 11:43:23 [TestNG-test-OrangeHRMTest-3] FATAL BaseClass - Fatal Message
+2025-12-29 11:43:23 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Error Message
+2025-12-29 11:43:23 [TestNG-test-OrangeHRMTest-2] FATAL BaseClass - Fatal Message
+2025-12-29 11:43:29 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Error Message
+2025-12-29 11:43:29 [TestNG-test-OrangeHRMTest-3] FATAL BaseClass - Fatal Message
