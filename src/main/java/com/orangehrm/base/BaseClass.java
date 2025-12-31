@@ -18,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.orangehrm.actiondriver.ActionDriver;
+import com.orangehrm.utilities.ExtentManager;
 
 public class BaseClass {
 
@@ -28,7 +29,6 @@ public class BaseClass {
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
 	
-	
 	public static final Logger logger = LogManager.getLogger(BaseClass.class);
 
 	@BeforeSuite
@@ -38,10 +38,13 @@ public class BaseClass {
 		FileInputStream fis = new FileInputStream("src\\main\\resources\\config.properties");
 		prop.load(fis);
 		logger.info("config.properties file loaded");
+		
+		//Start the Extent Report
+		ExtentManager.getReporter();
 	}
 
 	@BeforeMethod
-	public void setup() throws IOException {
+	public synchronized void setup() throws IOException {
 		System.out.println("Setting up WebDriver for:" + this.getClass().getSimpleName());
 		launchBrowser();
 		configureBrowser();
@@ -73,20 +76,23 @@ public class BaseClass {
 	 */
 
 	//New changes per ThreadLocal
-	private void launchBrowser() {
+	private synchronized void launchBrowser() {
 		String browser = prop.getProperty("browser");
 
 		if (browser.equalsIgnoreCase("chrome")) {
 			//driver = new ChromeDriver();
 			driver.set(new ChromeDriver()); //New changes per ThreadLocal
+			ExtentManager.registerDriver(getDriver());
 			logger.info("ChromeDriver instance is created.");
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			//driver = new FirefoxDriver();
 			driver.set(new FirefoxDriver());
+			ExtentManager.registerDriver(getDriver());
 			logger.info("FirefoxDriver instance is created.");
 		} else if (browser.equalsIgnoreCase("edge")) {
 			//driver = new EdgeDriver();
 			driver.set(new EdgeDriver());
+			ExtentManager.registerDriver(getDriver());
 			logger.info("EdgeDriver instance is created.");
 		} else {
 			throw new IllegalArgumentException("Browser not supported: " + browser);
@@ -115,7 +121,7 @@ public class BaseClass {
 	}
 
 	@AfterMethod
-	public void tearDown() {
+	public synchronized void tearDown() {
 		if (getDriver() != null) {
 			try {
 				getDriver().quit();
@@ -128,6 +134,7 @@ public class BaseClass {
 		actionDriver.remove();
 		//driver = null;
 		//actionDriver = null;
+		ExtentManager.endTest();
 	}
 
 	/*
