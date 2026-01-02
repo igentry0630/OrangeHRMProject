@@ -97,7 +97,7 @@ public class ExtentManager {
 
 	// Log a skip
 	public static void logSkip(String logMessage) {
-		String colorMessage = String.format("<span style='color:red;'>%s</span>", logMessage);
+		String colorMessage = String.format("<span style='color:orange;'>%s</span>", logMessage);
 		getTest().skip(colorMessage);
 	}
 

@@ -22,7 +22,7 @@ public class HomePageTest extends BaseClass {
 	
 	@Test
 	public void verifyOrangeHRMLogoTest() {
-		ExtentManager.startTest("Verify OrangeHRM Logo Test");
+//		ExtentManager.startTest("Verify Home Page OrangeHRM Logo Test"); -- Moved to TestListener
 		ExtentManager.logStep("Logging in with valid credentials");
 		loginPage.login("admin", "admin123");
 		ExtentManager.logStep("Verifying OrangeHRM Logo is visible on Home Page");
@@ -30,7 +30,6 @@ public class HomePageTest extends BaseClass {
 		ExtentManager.logStep("Validation Successful");
 		homePage.logout();
 		ExtentManager.logStep("Logged out successfully");
-		staticWait(2);
 	}
 	
 	

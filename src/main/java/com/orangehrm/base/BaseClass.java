@@ -40,7 +40,7 @@ public class BaseClass {
 		logger.info("config.properties file loaded");
 		
 		//Start the Extent Report
-		ExtentManager.getReporter();
+//		ExtentManager.getReporter(); -- This method has been moved to TestListener class
 	}
 
 	@BeforeMethod
@@ -134,7 +134,7 @@ public class BaseClass {
 		actionDriver.remove();
 		//driver = null;
 		//actionDriver = null;
-		ExtentManager.endTest();
+//		ExtentManager.endTest(); -- This method has been moved to TestListener class
 	}
 
 	/*
