@@ -9,11 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">OrangeHRMSuite</th></tr>
-<tr><td><a href="#t0">OrangeHRMTest</a></td><td class="num">4</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">17,087</td><td></td><td></td></tr>
+<tr><td><a href="#t0">OrangeHRMTest</a></td><td class="num">5</td><td class="num attn">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">32,986</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRMSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OrangeHRMTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.orangehrm.test.DummyClass</td><td><a href="#m0">dummyTest</a></td><td rowspan="1">1767220769375</td><td rowspan="1">22</td></tr><tr><th colspan="4">OrangeHRMTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.DummyClass2</td><td><a href="#m1">dummyTest</a></td><td rowspan="1">1767220769272</td><td rowspan="1">31</td></tr><tr class="passedodd"><td rowspan="1">com.orangehrm.test.HomePageTest</td><td><a href="#m2">verifyOrangeHRMLogoTest</a></td><td rowspan="1">1767220769280</td><td rowspan="1">5644</td></tr><tr class="passedeven"><td rowspan="2">com.orangehrm.test.LoginPageTest</td><td><a href="#m3">inValidLoginTest</a></td><td rowspan="1">1767220769340</td><td rowspan="1">1368</td></tr><tr class="passedeven"><td><a href="#m4">verifyValidLoginTest</a></td><td rowspan="1">1767220775118</td><td rowspan="1">4427</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRMSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OrangeHRMTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.orangehrm.test.LoginPageTest</td><td><a href="#m0">inValidLoginTest</a></td><td rowspan="1">1767396954184</td><td rowspan="1">2834</td></tr><tr><th colspan="4">OrangeHRMTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.orangehrm.test.DummyClass</td><td><a href="#m1">dummyTest</a></td><td rowspan="1">1767396954110</td><td rowspan="1">35</td></tr><tr><th colspan="4">OrangeHRMTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.DummyClass2</td><td><a href="#m2">dummyTest</a></td><td rowspan="1">1767396954220</td><td rowspan="1">27</td></tr><tr class="passedodd"><td rowspan="2">com.orangehrm.test.HomePageTest</td><td><a href="#m3">verifyOrangeHRMLogoTest</a></td><td rowspan="2">1767396964578</td><td rowspan="2">4471</td></tr><tr class="passedodd"><td><a href="#m4">verifyOrangeHRMLogoTest</a></td></tr><tr class="passedeven"><td rowspan="2">com.orangehrm.test.LoginPageTest</td><td><a href="#m5">verifyValidLoginTest</a></td><td rowspan="2">1767396962423</td><td rowspan="2">6076</td></tr><tr class="passedeven"><td><a href="#m6">verifyValidLoginTest</a></td></tr></tbody>
 </table>
-<h2>OrangeHRMTest</h2><h3 id="m0">com.orangehrm.test.DummyClass#dummyTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.SkipException: Skipping this test intentionally part of Testing.
+<h2>OrangeHRMTest</h2><h3 id="m0">com.orangehrm.test.LoginPageTest#inValidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin1</td><td>admin123</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Test Failed: Error message is not displayed for invalid login. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.inValidLoginTest(LoginPageTest.java:46)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.orangehrm.test.DummyClass#dummyTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.SkipException: Skipping this test intentionally part of Testing.
 	at com.orangehrm.test.DummyClass.dummyTest(DummyClass.java:22)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
@@ -21,9 +29,10 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 ... Removed 11 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.orangehrm.test.DummyClass2#dummyTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.orangehrm.test.HomePageTest#verifyOrangeHRMLogoTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.orangehrm.test.LoginPageTest#inValidLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.orangehrm.test.LoginPageTest#verifyValidLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.orangehrm.test.DummyClass2#dummyTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.orangehrm.test.HomePageTest#verifyOrangeHRMLogoTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.orangehrm.test.HomePageTest#verifyOrangeHRMLogoTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.orangehrm.test.LoginPageTest#verifyValidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.orangehrm.test.LoginPageTest#verifyValidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin</td><td>admin123</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,1 +1,18 @@
+# Maven build output
 /target/
+
+# TestNG / Extent Reports
+/test-output/
+/src/test/resources/ExtentReport/
+/src/test/resources/ExtentReports/
+/src/test/resources/extent-reports/
+
+# Screenshots
+/src/test/resources/screenshots/
+/src/test/resources/screenshot/
+/src/test/resources/images/
+
+# Ignore report files if dumped directly in resources
+/src/test/resources/*.html
+/src/test/resources/*.png
+/src/test/resources/*.jpg
